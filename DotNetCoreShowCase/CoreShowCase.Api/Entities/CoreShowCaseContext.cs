@@ -10,7 +10,7 @@ namespace CoreShowCase.Api.Entities
     {
         public CoreShowCaseContext(DbContextOptions<CoreShowCaseContext> options) : base(options)
         {
-            
+            Database.Migrate();
         }
 
         public DbSet<User> Users { get; set; }
