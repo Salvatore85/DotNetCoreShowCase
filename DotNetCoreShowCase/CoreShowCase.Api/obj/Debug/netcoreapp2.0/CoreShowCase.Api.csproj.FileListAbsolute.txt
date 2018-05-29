@@ -6,3 +6,6 @@ D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Deb
 D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.0\CoreShowCase.Api.csproj.CoreCompileInputs.cache
 D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.0\CoreShowCase.Api.AssemblyInfoInputs.cache
 D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.0\CoreShowCase.Api.AssemblyInfo.cs
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\bin\Debug\netcoreapp2.0\CoreShowCase.Api.pdb
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.0\CoreShowCase.Api.dll
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.0\CoreShowCase.Api.pdb
