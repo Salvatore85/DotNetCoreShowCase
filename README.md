@@ -2,6 +2,12 @@
 
 A .Net Core testproject to experiment with.
 
+## Things included so far
+
+- Web API
+- EF Core SQL provider
+- Centralized configuration setting with appSettings.json
+
 
 ## .Net Core commands
 
