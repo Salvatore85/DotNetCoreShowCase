@@ -18,5 +18,8 @@ namespace CoreShowCase.Api.Entities
         public string Title { get; set; }
         [Required]
         public string Article { get; set; }
+
+        public User User { get; set; }
+        public int UserId { get; set; }
     }
 }
