@@ -14,7 +14,7 @@ A .Net Core test project to experiment with.
 - Centralized configuration settings with appSettings.json
 
 
-## .Net Core commands 
+## .Net Core commands
 
 To compile and preview changes in the code while the app is running:
 
