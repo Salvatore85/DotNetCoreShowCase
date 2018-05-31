@@ -18,5 +18,7 @@ namespace CoreShowCase.Api.Services
 
         IEnumerable<Comment> GetComments();
         Comment GetComment(int commentId);
+
+        bool Save();
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CoreShowCase.Api.Entities;
+using CoreShowCase.Api.Models;
 using CoreShowCase.Api.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -40,6 +41,12 @@ namespace CoreShowCase.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            AutoMapper.Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<User, UserDTO>();
+                cfg.CreateMap<UserCreationDTO, User>();
+            });
+
             app.UseMvc();
         }
     }

@@ -54,5 +54,10 @@ namespace CoreShowCase.Api.Services
         {
             return Context.Users.Any(u => u.Id == userId);
         }
+
+        public bool Save()
+        {
+            return (Context.SaveChanges() >= 0);
+        }
     }
 }

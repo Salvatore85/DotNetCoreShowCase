@@ -49,7 +49,7 @@ namespace CoreShowCase.Api.Controllers
                 var userResult = Mapper.Map<UserDTO>(user);
                 return Ok(userResult);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return StatusCode(500, "A problem occured while handeling your request.");
             }
@@ -72,7 +72,15 @@ namespace CoreShowCase.Api.Controllers
 
             Repository.CreateUser(finalUser);
 
-            return CreatedAtRoute("GetUser", finalUser);
+            if (!Repository.Save())
+            {
+                return StatusCode(500, "A problem happened while handeling your request.");
+            }
+
+            var createdUser = Mapper.Map<UserDTO>(finalUser);
+
+            //return CreatedAtAction("GetUsers", createdUser);
+            return CreatedAtRoute("GetUser", new { id = createdUser.Id }, createdUser);
         }
     }
 }
