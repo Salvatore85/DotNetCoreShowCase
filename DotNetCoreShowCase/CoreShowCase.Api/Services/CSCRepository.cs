@@ -25,6 +25,16 @@ namespace CoreShowCase.Api.Services
             return Context.BlogPosts.OrderBy(o => o.DatePosted);
         }
 
+        public Comment GetComment(int commentId)
+        {
+            return Context.Comments.Where(c => c.Id == commentId).FirstOrDefault();
+        }
+
+        public IEnumerable<Comment> GetComments()
+        {
+            return Context.Comments.OrderBy(o => o.DatePosted);
+        }
+
         public User GetUser(int userId)
         {
             return Context.Users.Where(u => u.Id == userId).FirstOrDefault();
@@ -33,6 +43,11 @@ namespace CoreShowCase.Api.Services
         public IEnumerable<User> GetUsers()
         {
             return Context.Users.ToList();
+        }
+
+        public bool UserExists(int userId)
+        {
+            return Context.Users.Any(u => u.Id == userId);
         }
     }
 }
