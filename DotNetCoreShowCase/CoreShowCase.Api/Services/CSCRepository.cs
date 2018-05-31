@@ -15,6 +15,11 @@ namespace CoreShowCase.Api.Services
             Context = context;
         }
 
+        public void CreateUser(User user)
+        {
+            Context.Users.Add(user);
+        }
+
         public BlogPost GetBlogPost(int blogPostId)
         {
             return Context.BlogPosts.Where(b => b.Id == blogPostId).FirstOrDefault();

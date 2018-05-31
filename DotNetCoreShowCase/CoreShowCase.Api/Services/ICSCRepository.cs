@@ -10,6 +10,7 @@ namespace CoreShowCase.Api.Services
     {
         IEnumerable<User> GetUsers();
         User GetUser(int userId);
+        void CreateUser(User user);
         bool UserExists(int userId);
 
         IEnumerable<BlogPost> GetBlogPosts();

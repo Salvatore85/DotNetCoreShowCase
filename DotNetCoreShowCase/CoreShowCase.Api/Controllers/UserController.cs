@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using CoreShowCase.Api.Entities;
 using CoreShowCase.Api.Models;
 using CoreShowCase.Api.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CoreShowCase.Api.Controllers
 {
-    [Route("api/user")]
+    [Route("api/users")]
     public class UserController : Controller
     {
         private ICSCRepository Repository;
@@ -52,6 +53,26 @@ namespace CoreShowCase.Api.Controllers
             {
                 return StatusCode(500, "A problem occured while handeling your request.");
             }
+        }
+
+        [HttpPost]
+        public IActionResult CreateUser([FromBody]UserCreationDTO newUser)
+        {
+            if (newUser == null)
+            {
+                return BadRequest();
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            var finalUser = Mapper.Map<User>(newUser);
+
+            Repository.CreateUser(finalUser);
+
+            return CreatedAtRoute("GetUser", finalUser);
         }
     }
 }
