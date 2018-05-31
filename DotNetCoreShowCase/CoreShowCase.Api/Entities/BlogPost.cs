@@ -18,7 +18,9 @@ namespace CoreShowCase.Api.Entities
         public string Title { get; set; }
         [Required]
         public string Article { get; set; }
+        public ICollection<Comment> Comments { get; set; } = new List<Comment>();
 
+        // Relationship with User Entity
         public User User { get; set; }
         public int UserId { get; set; }
     }
