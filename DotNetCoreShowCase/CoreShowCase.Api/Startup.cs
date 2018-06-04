@@ -33,8 +33,6 @@ namespace CoreShowCase.Api
             var connectionString = Configuration["connectionStrings:coreShowCaseDBConnectionString"];
             services.AddDbContext<CoreShowCaseContext>(o => o.UseSqlServer(connectionString));
 
-            services.addid
-
             services.AddMvc();
 
             services.AddScoped<ICSCRepository, CSCRepository>(); 

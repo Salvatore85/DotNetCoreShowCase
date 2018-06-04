@@ -1,0 +1,11 @@
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\bin\Debug\netcoreapp2.1\CoreShowCase.Api.deps.json
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\bin\Debug\netcoreapp2.1\CoreShowCase.Api.runtimeconfig.json
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\bin\Debug\netcoreapp2.1\CoreShowCase.Api.runtimeconfig.dev.json
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\bin\Debug\netcoreapp2.1\CoreShowCase.Api.dll
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\bin\Debug\netcoreapp2.1\CoreShowCase.Api.pdb
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.csprojAssemblyReference.cache
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.csproj.CoreCompileInputs.cache
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.AssemblyInfoInputs.cache
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.AssemblyInfo.cs
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.dll
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.pdb
