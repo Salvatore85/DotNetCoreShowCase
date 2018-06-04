@@ -12,6 +12,7 @@ A .Net Core test project to experiment with.
 - Web API
 - EF Core SQL provider
 - Centralized configuration settings with appSettings.json
+- AutoMapper
 
 
 ## .Net Core commands 
