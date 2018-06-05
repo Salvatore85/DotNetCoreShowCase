@@ -29,19 +29,19 @@ namespace CoreShowCase.Api.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{id}", Name = "GetUser")]
-        public IActionResult GetUser(int userId)
+        [HttpGet("{id}")]
+        public IActionResult GetUserById(int id)
         {
             try
             {
-                var user = Repository.GetUser(userId);
+                var user = Repository.GetUser(id);
 
                 if (user == null)
                 {
                     return NotFound();
                 }
 
-                if (!Repository.UserExists(userId))
+                if (!Repository.UserExists(id))
                 {
                     return NotFound();
                 }
