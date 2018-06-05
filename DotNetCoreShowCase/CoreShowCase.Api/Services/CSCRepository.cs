@@ -42,7 +42,7 @@ namespace CoreShowCase.Api.Services
 
         public User GetUser(int userId)
         {
-            return Context.Users.Where(u => u.Id == userId).FirstOrDefault();
+            return Context.Users.Where(u => u.UserId == userId).FirstOrDefault();
         }
 
         public IEnumerable<User> GetUsers()
@@ -52,12 +52,13 @@ namespace CoreShowCase.Api.Services
 
         public bool UserExists(int userId)
         {
-            return Context.Users.Any(u => u.Id == userId);
+            return Context.Users.Any(u => u.UserId == userId);
         }
 
         public bool Save()
         {
             return (Context.SaveChanges() >= 0);
         }
+
     }
 }
