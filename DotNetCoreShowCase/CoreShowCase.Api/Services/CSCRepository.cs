@@ -18,6 +18,7 @@ namespace CoreShowCase.Api.Services
         public void CreateUser(User user)
         {
             Context.Users.Add(user);
+            Context.SaveChanges();
         }
 
         public BlogPost GetBlogPost(int blogPostId)
