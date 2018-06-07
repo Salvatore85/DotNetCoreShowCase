@@ -17,7 +17,7 @@ namespace CoreShowCase.Api.Services
 
         public void CreateUser(User user)
         {
-            Context.Users.Add(user);
+            Context.Users.AddAsync(user);
         }
 
         public BlogPost GetBlogPost(int blogPostId)
@@ -42,8 +42,8 @@ namespace CoreShowCase.Api.Services
 
         public User GetUser(int userId)
         {
-            //return Context.Users.Where(u => u.Id == userId).FirstOrDefault();
-            return Context.Users.Where(u => u.Id == userId).SingleOrDefault();
+            return Context.Users.Where(u => u.Id == userId).FirstOrDefault();
+            //return Context.Users.Where(u => u.Id == userId).SingleOrDefault();
         }
 
         public IEnumerable<User> GetUsers()

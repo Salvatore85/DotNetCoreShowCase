@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoreShowCase.Api.Models
 {
-    public class UserDTO : IdentityUser
+    public class UserDTO : IdentityUser<int>
     {
         public string FirstName { get; set; }
         public string Lastname { get; set; }

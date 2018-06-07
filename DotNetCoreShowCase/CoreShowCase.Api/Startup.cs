@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CoreShowCase.Api.Entities;
 using CoreShowCase.Api.Models;
 using CoreShowCase.Api.Services;
+using CoreShowCase.Api.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -45,6 +46,7 @@ namespace CoreShowCase.Api
             {
                 cfg.CreateMap<User, UserDTO>();
                 cfg.CreateMap<UserCreationDTO, User>();
+                cfg.CreateMap<RegistrationViewModel, User>();
             });
 
             app.UseMvc();
