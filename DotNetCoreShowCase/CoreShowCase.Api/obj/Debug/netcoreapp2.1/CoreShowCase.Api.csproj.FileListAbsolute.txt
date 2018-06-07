@@ -9,3 +9,6 @@ D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Deb
 D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.AssemblyInfo.cs
 D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.dll
 D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.pdb
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.RazorAssemblyInfo.cache
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.RazorAssemblyInfo.cs
+D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.RazorTargetAssemblyInfo.cache

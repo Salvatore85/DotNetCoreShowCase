@@ -9,6 +9,7 @@ using CoreShowCase.Api.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,6 +34,8 @@ namespace CoreShowCase.Api
 
             var connectionString = Configuration["connectionStrings:coreShowCaseDBConnectionString"];
             services.AddDbContext<CoreShowCaseContext>(o => o.UseSqlServer(connectionString));
+
+            services.AddIdentityCore<User>(options => { });
 
             services.AddMvc();
 
