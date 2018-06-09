@@ -12,3 +12,17 @@ D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Deb
 D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.RazorAssemblyInfo.cache
 D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.RazorAssemblyInfo.cs
 D:\Random Code\C#\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.RazorTargetAssemblyInfo.cache
+E:\Development\GitHub\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\bin\Debug\netcoreapp2.1\CoreShowCase.Api.deps.json
+E:\Development\GitHub\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\bin\Debug\netcoreapp2.1\CoreShowCase.Api.runtimeconfig.json
+E:\Development\GitHub\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\bin\Debug\netcoreapp2.1\CoreShowCase.Api.runtimeconfig.dev.json
+E:\Development\GitHub\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\bin\Debug\netcoreapp2.1\CoreShowCase.Api.dll
+E:\Development\GitHub\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\bin\Debug\netcoreapp2.1\CoreShowCase.Api.pdb
+E:\Development\GitHub\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.csprojAssemblyReference.cache
+E:\Development\GitHub\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.csproj.CoreCompileInputs.cache
+E:\Development\GitHub\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.RazorAssemblyInfo.cache
+E:\Development\GitHub\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.RazorAssemblyInfo.cs
+E:\Development\GitHub\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.AssemblyInfoInputs.cache
+E:\Development\GitHub\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.AssemblyInfo.cs
+E:\Development\GitHub\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.RazorTargetAssemblyInfo.cache
+E:\Development\GitHub\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.dll
+E:\Development\GitHub\DotNetCoreShowCase\DotNetCoreShowCase\CoreShowCase.Api\obj\Debug\netcoreapp2.1\CoreShowCase.Api.pdb
