@@ -52,6 +52,8 @@ namespace CoreShowCase.Api
                 cfg.CreateMap<RegistrationViewModel, User>();
             });
 
+            app.UseAuthentication();
+
             app.UseMvc();
         }
     }
