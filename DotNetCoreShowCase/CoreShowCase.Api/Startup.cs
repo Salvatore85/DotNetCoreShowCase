@@ -56,6 +56,10 @@ namespace CoreShowCase.Api
                 cfg.CreateMap<RegistrationViewModel, User>();
             });
 
+            app.UseStaticFiles();
+
+            app.UseExceptionHandler("/Error");
+
             app.UseAuthentication();
 
             app.UseMvc();
