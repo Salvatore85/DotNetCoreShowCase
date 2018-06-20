@@ -5,6 +5,7 @@ using CoreShowCase.Api.Services;
 using CoreShowCase.Api.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,11 +18,13 @@ namespace CoreShowCase.Api.Controllers
     {
         private ICSCRepository Repository;
         private UserManager<User> UserManager;
+        private ILogger _logger;
 
-        public UserController(ICSCRepository repository, UserManager<User> userManager)
+        public UserController(ICSCRepository repository, UserManager<User> userManager, ILogger<UserController> logger)
         {
             Repository = repository;
             UserManager = userManager;
+            _logger = logger;
         }
 
         [HttpGet(Name = "GetUsers")]
@@ -38,6 +41,8 @@ namespace CoreShowCase.Api.Controllers
         {
             try
             {
+                _logger.LogInformation("Getting user with id {id}", id);
+
                 var user = Repository.GetUser(id);
 
                 if (user == null)
