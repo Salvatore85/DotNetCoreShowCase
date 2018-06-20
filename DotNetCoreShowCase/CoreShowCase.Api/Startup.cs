@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -34,7 +36,12 @@ namespace CoreShowCase.Api
 
             services.AddIdentityCore<User>(options => { });
 
-            services.AddMvc();
+            services.AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .AddMvcOptions(options =>
+                 {
+                     options.InputFormatterExceptionPolicy = InputFormatterExceptionPolicy.AllExceptions;
+                 });
 
             services.AddScoped<ICSCRepository, CSCRepository>(); 
         }
