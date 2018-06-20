@@ -17,13 +17,13 @@ namespace CoreShowCase.Api.Controllers
     public class UserController : Controller
     {
         private ICSCRepository Repository;
-        private UserManager<User> UserManager;
+        //private UserManager<User> UserManager;
         private ILogger _logger;
 
-        public UserController(ICSCRepository repository, UserManager<User> userManager, ILogger<UserController> logger)
+        public UserController(ICSCRepository repository, ILogger<UserController> logger)
         {
             Repository = repository;
-            UserManager = userManager;
+            //UserManager = userManager;
             _logger = logger;
         }
 
@@ -47,11 +47,13 @@ namespace CoreShowCase.Api.Controllers
 
                 if (user == null)
                 {
+                    _logger.LogWarning("Missing user ID! Please provide an user ID.");
                     return NotFound();
                 }
 
                 if (!Repository.UserExists(id))
                 {
+                    _logger.LogWarning("User with id {id} does not exist!");
                     return NotFound();
                 }
 
@@ -60,6 +62,7 @@ namespace CoreShowCase.Api.Controllers
             }
             catch (Exception)
             {
+                _logger.LogError("An internal error had occured");
                 return StatusCode(500, "A problem occured while handeling your request.");
             }
         }
@@ -80,7 +83,7 @@ namespace CoreShowCase.Api.Controllers
             var finalUser = Mapper.Map<User>(newUser);
 
             //Repository.CreateUser(finalUser);
-            var result = await UserManager.CreateAsync(finalUser, newUser.Password);
+            //var result = await UserManager.CreateAsync(finalUser, newUser.Password);
 
             if (!Repository.Save())
             {

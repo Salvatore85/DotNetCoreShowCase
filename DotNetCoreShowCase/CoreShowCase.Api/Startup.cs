@@ -34,7 +34,7 @@ namespace CoreShowCase.Api
             var connectionString = Configuration["connectionStrings:coreShowCaseDBConnectionString"];
             services.AddDbContext<CoreShowCaseContext>(o => o.UseSqlServer(connectionString));
 
-            services.AddIdentityCore<User>(options => { });
+            //services.AddIdentityCore<User>(options => { });
 
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
@@ -60,7 +60,7 @@ namespace CoreShowCase.Api
 
             app.UseExceptionHandler("/Error");
 
-            app.UseAuthentication();
+            //app.UseAuthentication();
 
             app.UseMvc();
         }
