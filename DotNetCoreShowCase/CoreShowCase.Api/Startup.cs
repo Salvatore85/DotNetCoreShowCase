@@ -29,9 +29,6 @@ namespace CoreShowCase.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            //EF Core InMemory Database
-            //services.AddDbContext<CoreShowCaseContext>(o => o.UseInMemoryDatabase("BlogPosts"));
-
             var connectionString = Configuration["connectionStrings:coreShowCaseDBConnectionString"];
             services.AddDbContext<CoreShowCaseContext>(o => o.UseSqlServer(connectionString));
 
