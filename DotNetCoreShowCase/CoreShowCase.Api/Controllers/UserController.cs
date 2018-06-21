@@ -68,7 +68,7 @@ namespace CoreShowCase.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateUser([FromBody]RegistrationViewModel newUser)
+        public IActionResult CreateUser([FromBody]RegistrationViewModel newUser)
         {
             if (newUser == null)
             {
