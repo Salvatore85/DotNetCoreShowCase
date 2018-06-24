@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,15 +31,17 @@ namespace CoreShowCase.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            //EF Core InMemory Database
-            //services.AddDbContext<CoreShowCaseContext>(o => o.UseInMemoryDatabase("BlogPosts"));
-
             var connectionString = Configuration["connectionStrings:coreShowCaseDBConnectionString"];
             services.AddDbContext<CoreShowCaseContext>(o => o.UseSqlServer(connectionString));
 
-            services.AddIdentityCore<User>(options => { });
+            //services.AddIdentityCore<User>(options => { });
 
-            services.AddMvc();
+            services.AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .AddMvcOptions(options =>
+                 {
+                     options.InputFormatterExceptionPolicy = InputFormatterExceptionPolicy.AllExceptions;
+                 });
 
             services.AddScoped<ICSCRepository, CSCRepository>(); 
         }
@@ -52,7 +56,11 @@ namespace CoreShowCase.Api
                 cfg.CreateMap<RegistrationViewModel, User>();
             });
 
-            app.UseAuthentication();
+            app.UseStaticFiles();
+
+            app.UseExceptionHandler("/Error");
+
+            //app.UseAuthentication();
 
             app.UseMvc();
         }

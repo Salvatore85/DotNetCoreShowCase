@@ -5,6 +5,7 @@ using CoreShowCase.Api.Services;
 using CoreShowCase.Api.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +17,14 @@ namespace CoreShowCase.Api.Controllers
     public class UserController : Controller
     {
         private ICSCRepository Repository;
-        private UserManager<User> UserManager;
+        //private UserManager<User> UserManager;
+        private ILogger _logger;
 
-        public UserController(ICSCRepository repository, UserManager<User> userManager)
+        public UserController(ICSCRepository repository, ILogger<UserController> logger)
         {
             Repository = repository;
-            UserManager = userManager;
+            //UserManager = userManager;
+            _logger = logger;
         }
 
         [HttpGet(Name = "GetUsers")]
@@ -38,15 +41,19 @@ namespace CoreShowCase.Api.Controllers
         {
             try
             {
+                _logger.LogInformation("Getting user with id {id}", id);
+
                 var user = Repository.GetUser(id);
 
                 if (user == null)
                 {
+                    _logger.LogWarning("Missing user ID! Please provide an user ID.");
                     return NotFound();
                 }
 
                 if (!Repository.UserExists(id))
                 {
+                    _logger.LogWarning("User with id {id} does not exist!");
                     return NotFound();
                 }
 
@@ -55,12 +62,13 @@ namespace CoreShowCase.Api.Controllers
             }
             catch (Exception)
             {
+                _logger.LogError("An internal error had occured");
                 return StatusCode(500, "A problem occured while handeling your request.");
             }
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateUser([FromBody]RegistrationViewModel newUser)
+        public IActionResult CreateUser([FromBody]RegistrationViewModel newUser)
         {
             if (newUser == null)
             {
@@ -75,7 +83,7 @@ namespace CoreShowCase.Api.Controllers
             var finalUser = Mapper.Map<User>(newUser);
 
             //Repository.CreateUser(finalUser);
-            var result = await UserManager.CreateAsync(finalUser, newUser.Password);
+            //var result = await UserManager.CreateAsync(finalUser, newUser.Password);
 
             if (!Repository.Save())
             {
