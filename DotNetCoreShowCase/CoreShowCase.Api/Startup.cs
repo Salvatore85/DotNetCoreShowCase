@@ -60,6 +60,7 @@ namespace CoreShowCase.Api
 
             app.UseExceptionHandler("/Error");
 
+            //TODO
             //app.UseAuthentication();
 
             app.UseMvc();
